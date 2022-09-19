@@ -40,4 +40,7 @@ my_data_row = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_row)
 
-fruits_selected = streamlit.multiselect("What fruits would you like to add?", list(my_fruit_list.index), ['Avocado','Strawberries'])
+add_my_fruit = streamlit.text_input("What fruits would you like to add?")
+streamlit.write('Thanks for adding ', add_my_fruit)
+
+INSERT INTO pc_rivery_db.public.fruit_load_list VALUES( 'test' )
